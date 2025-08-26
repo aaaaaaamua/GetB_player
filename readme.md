@@ -1,0 +1,35 @@
+# 小破站歌单转存
+> 使用插件ffmpeg  
+> 为了避免溯源,真实的数据已被删除
+
+## 脚本原理
+1. 获取缓存中分离出来的音频文件
+2. 将m4s文件转为mp3格式
+3. `main.py`负责把m4s文件按照指定名称复制出来
+4. `change_format.py`负责转换格式
+
+## 缓存文件格式分析
+```bash
+文件夹结构:
+|- fold0
+|- - fold1
+|- - - fold3
+|- - - - 80
+|- - - - - audio.m4s
+|- - - - - video.m4s
+|- - - - entry.json
+|- - - - danmaku.xml
+|- - - fold4
+|- - - - 80
+|- - - - - audio.m4s
+|- - - - - video.m4s
+|- - - - entry.json
+|- - - - danmaku.xml
+|- - - fold5
+|- - - - 80
+|- - - - - audio.m4s
+|- - - - - video.m4s
+|- - - - entry.json
+|- - - - danmaku.xml
+```
+在这个文件夹中,需要用的就是audio.m4s文件与entry.json
