@@ -29,6 +29,12 @@
 ```
 在这个文件夹中,需要用的就是audio.m4s文件与entry.json
 
+## 使用说明
+ ```bash
+   pip install -r requirements.txt
+   ```
+修改`main.py`中文件夹信息,然后运行脚本
+
 ## 0.2版本更新
 [版本大更新]综合成为一个处理文件,添加音乐的exif信息
 
